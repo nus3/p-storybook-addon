@@ -29,10 +29,10 @@ export const Tool = memo(function MyAddonSelector() {
     <IconButton
       key={TOOL_ID}
       active={isActive}
-      title="Enable my addon"
+      title="Enable nus3 addon"
       onClick={toggleMyTool}
     >
-      <Icons icon="lightning" />
+      <Icons icon="bookmark" />
     </IconButton>
   );
 });

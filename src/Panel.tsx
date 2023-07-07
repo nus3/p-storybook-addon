@@ -1,5 +1,9 @@
 import React from "react";
-import { useAddonState, useChannel } from "@storybook/manager-api";
+import {
+  useAddonState,
+  useChannel,
+  useStorybookApi,
+} from "@storybook/manager-api";
 import { AddonPanel } from "@storybook/components";
 import { ADDON_ID, EVENTS } from "./constants";
 import { PanelContent } from "./components/PanelContent";
@@ -20,8 +24,11 @@ export const Panel: React.FC<PanelProps> = (props) => {
     [EVENTS.RESULT]: (newResults) => setState(newResults),
   });
 
+  const api = useStorybookApi();
+
   return (
     <AddonPanel {...props}>
+      <h2>hello nus3</h2>
       <PanelContent
         results={results}
         fetchData={() => {
